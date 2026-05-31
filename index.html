@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" class="h-full scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opair — The Kubernetes of Enterprise AI</title>
+  <meta name="description"
+    content="Opair is the governance layer for enterprise AI. Control costs, enforce policies, detect sensitive data, and maintain compliance across every AI model your organization uses." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Opair — The Kubernetes of Enterprise AI" />
+  <meta property="og:description"
+    content="Opair is the governance layer for enterprise AI. Control costs, enforce policies, detect sensitive data, and maintain compliance across every AI model your organization uses." />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:url" content="https://opair.dev" />
+  <meta property="og:site_name" content="Opair" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Opair — The Kubernetes of Enterprise AI" />
+  <meta name="twitter:description"
+    content="Opair is the governance layer for enterprise AI. Control costs, enforce policies, detect sensitive data, and maintain compliance." />
+  <meta name="twitter:image" content="/og-image.png" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Opair",
+        "url": "https://opair.dev",
+        "logo": "https://opair.dev/logo.svg",
+        "description": "The governance layer for enterprise AI — control costs, enforce policies, detect sensitive data, and maintain compliance.",
+        "sameAs": [
+          "https://github.com/opair-dev",
+          "https://twitter.com/opair_dev",
+          "https://linkedin.com/company/opair-dev"
+        ]
+      }
+    </script>
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Opair Control Plane",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Cloud",
+        "description": "Enterprise AI governance platform — policy engine, detection & masking, model routing, audit trail, cost control, and compliance.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Contact us for enterprise pricing"
+        }
+      }
+    </script>
+  <script type="module" crossorigin src="/assets/index-CZ5ynwux.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-D-MfKoFd.css">
+  <style>
+    /* Temporarily hide Docs menu item and social-proof section (trusted companies + reviews) */
+    a[href="/developers"],
+    #social-proof {
+      display: none !important;
+    }
+  </style>
+  <script>
+    // Robustly remove `#social-proof` and `/developers` links even after client-side re-render
+    (function removeSocialProof() {
+      function remove() {
+        try {
+          const el = document.getElementById('social-proof');
+          if (el) {
+            el.remove();
+            return true;
+          }
+          const anchors = document.querySelectorAll('a[href="/developers"]');
+          if (anchors.length) anchors.forEach(n => n.remove());
+        } catch (e) { }
+        return false;
+      }
+
+      if (remove()) return;
+
+      const obs = new MutationObserver(() => {
+        if (remove()) obs.disconnect();
+      });
+      obs.observe(document.documentElement, { childList: true, subtree: true });
+
+      const id = setInterval(() => {
+        if (remove()) { clearInterval(id); obs.disconnect(); }
+      }, 200);
+    })();
+  </script>
+</head>
+
+<body class="h-full bg-gray-950 text-gray-100 antialiased">
+  <div id="root" class="h-full"></div>
+</body>
+
+</html>
